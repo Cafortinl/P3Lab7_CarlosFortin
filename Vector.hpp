@@ -22,11 +22,11 @@ class Vector{
         T getX(){ return comp_x; }
         T getY(){ return comp_y; }
         T getZ(){ return comp_z; }
-        Vector operator+ (Vector operando){
-            this + operando;
+        Vector operator+ (Vector<T> operando){
+            *this + operando;
         }
-        Vector operator* (Vector operando){
-            this * operando;
+        Vector operator* (Vector<T> operando){
+            *this * operando;
         }
         string toString(){
             string salida = "[" + comp_x.toString() + ", " + comp_y.toString() + ", " + comp_z.toString() + "]";
