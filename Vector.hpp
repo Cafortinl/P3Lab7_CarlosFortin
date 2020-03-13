@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <deque>
+#include <string>
 
 using namespace std;
 
@@ -21,9 +22,14 @@ class Vector{
         T getX(){ return comp_x; }
         T getY(){ return comp_y; }
         T getZ(){ return comp_z; }
-        Vector operator+ (Vector operando);
-        Vector operator* (Vector operando);
-        void printVector(){
-            cout << "[" << comp_x << ", " << comp_y << ", " << comp_z << "]";
+        Vector operator+ (Vector operando){
+            this + operando;
+        }
+        Vector operator* (Vector operando){
+            this * operando;
+        }
+        string toString(){
+            string salida = "[" + comp_x.toString() + ", " + comp_y.toString() + ", " + comp_z.toString() + "]";
+            return salida;
         }
 };

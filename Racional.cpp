@@ -1,4 +1,7 @@
 #include "Racional.hpp"
+#include <string>
+
+using namespace std;
 
 Racional::Racional(){
 
@@ -34,4 +37,9 @@ Racional Racional::mult(Racional r1, Racional r2){
 
 void Racional::simplificar(){
 
+}
+
+string Racional::toString(){
+    string salida = to_string(num) + "/" + to_string(den);
+    return salida;
 }

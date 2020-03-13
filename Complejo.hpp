@@ -1,4 +1,7 @@
 #pragma once
+#include <string>
+
+using namespace std;
 
 class Complejo{
     private:
@@ -16,4 +19,5 @@ class Complejo{
         }
         Complejo suma(Complejo r1, Complejo r2);
         Complejo mult(Complejo r1, Complejo r2);
+        string toString();
 };

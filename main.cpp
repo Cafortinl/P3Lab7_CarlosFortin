@@ -9,21 +9,47 @@ using namespace std;
 vector<Vector<Racional>> racionales;
 vector<Vector<Complejo>> complejos;
 
+void opciones3(int x){
+    switch(x){
+        case 1:{
+            cout << "Racionales" << endl;
+            for(int i = 0;i < racionales.size();i++){
+                 cout << i << " - " << racionales[i].toString() << endl;
+            }
+            break;
+        }
+
+        case 2:{
+            cout << "Complejos" << endl;
+            for(int i = 0;i < complejos.size();i++){
+                 cout << i << " - " << complejos[i].toString() << endl;
+            }
+            break;
+            break;
+        }
+
+        default:{
+            cout << "La opcion ingresada no es valida" << endl;
+            break;
+        }
+    }
+}
+
 void opciones2(int x){
     switch(x){
         case 1:{
             int nX,dX,nY,dY,nZ,dZ;
-            cout << "Ingrese el numerador del elemento x: ";
+            cout << "Ingrese el numerador del elemento x: " << endl;
             cin >> nX;
-            cout << "Ingrese el denominador del elemento x: ";
+            cout << "Ingrese el denominador del elemento x: " << endl;
             cin >> dX;
-            cout << "Ingrese el numerador del elemento y: ";
+            cout << "Ingrese el numerador del elemento y: " << endl;
             cin >> nY;
-            cout << "Ingrese el denominador del elemento y: ";
+            cout << "Ingrese el denominador del elemento y: " << endl;
             cin >> dY;
-            cout << "Ingrese el numerador del elemento z: ";
+            cout << "Ingrese el numerador del elemento z: " << endl;
             cin >> nZ;
-            cout << "Ingrese el denominador del elemento z: ";
+            cout << "Ingrese el denominador del elemento z: " << endl;
             cin >> dZ;
             Racional x(nX,dX);
             Racional y(nY,dY);
@@ -70,11 +96,35 @@ void opciones1(int x){
             cout << "1. Racional" << endl;
             cout << "2. Complejo" << endl;
             cin >> opcion;
+            cout << endl;
             opciones2(opcion);
+            cout << endl;
             break;
         }
 
         case 2:{
+            int opcion;
+            cout << "Listar Vectores" << endl;
+
+            cout << "Racionales" << endl;
+            if(!racionales.empty()){
+                for(int i = 0;i < racionales.size();i++){
+                    cout << i << " - " << racionales[i].toString() << endl;
+                }
+            }else{
+                cout << "No hay racionales ingresados actualmente" << endl;
+            }
+            cout << endl;
+
+            cout << "Complejos" << endl;
+            if(!complejos.empty()){
+                for(int i = 0;i < complejos.size();i++){
+                    cout << i << " - " << complejos[i].toString() << endl;
+                }
+            }else{
+                cout << "No hay complejos ingresados actualmente" << endl;
+            }
+            cout << endl;
             break;
         }
 

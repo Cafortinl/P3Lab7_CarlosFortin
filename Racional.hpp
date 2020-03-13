@@ -1,4 +1,7 @@
 #pragma once
+#include <string>
+
+using namespace std;
 
 class Racional{
     private:
@@ -17,4 +20,5 @@ class Racional{
         Racional suma(Racional r1, Racional r2);
         Racional mult(Racional r1, Racional r2);
         void simplificar();
+        string toString();
 };
