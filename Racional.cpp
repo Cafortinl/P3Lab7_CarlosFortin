@@ -18,10 +18,20 @@ int Racional::getDen(){
 
 }
 
-Racional::Racional operator+ (Racional operando){
-    
+Racional Racional::suma(Racional r1, Racional r2){
+    int nNum, nDen;
+    nNum = (r1.getNum() * r2.getDen()) + (r1.getDen() * r2.getNum());
+    nDen = r1.getDen() * r2.getDen();
+    Racional resul(nNum, nDen);
 }
 
-Racional::Racional operator* (Racional operando){
+Racional Racional::mult(Racional r1, Racional r2){
+    int nNum, nDen;
+    nNum = r1.getNum() * r1.getNum();
+    nDen = r1.getDen() * r2.getDen();
+    Racional resul(nNum, nDen);
+}
+
+void Racional::simplificar(){
 
 }

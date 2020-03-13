@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <deque>
 
 using namespace std;
 
@@ -10,6 +11,7 @@ class Vector{
         T comp_x, comp_y, comp_z;
 
     public:
+        deque<T> vect;
         Vector();
         Vector(T x, T y,T z){
             comp_x = x;
