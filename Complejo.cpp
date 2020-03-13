@@ -1,5 +1,6 @@
 #include "Complejo.hpp"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -20,6 +21,7 @@ int Complejo::getImg(){
 }
 
 Complejo Complejo::suma(Complejo r1, Complejo r2){
+    //cout << "entro c" << endl;
     int nReal, nImag;
     nReal = r1.getReal() + r2.getReal();
     nImag = r1.getImg() + r2.getImg();
@@ -28,6 +30,7 @@ Complejo Complejo::suma(Complejo r1, Complejo r2){
 }
 
 Complejo Complejo::mult(Complejo r1, Complejo r2){
+    //cout << "entro c" << endl;
     int nReal, nImag;
     nReal = (r1.getReal()*r2.getReal()) + (-1*(r1.getImg() * r2.getImg()));
     nImag = (r1.getReal() * r2.getImg()) + (r1.getImg() * r2.getReal());

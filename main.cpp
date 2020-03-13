@@ -19,7 +19,9 @@ void opciones3(int x){
     switch(x){
         case 1:{
             int pos1, pos2, opcion;
-            Vector<Racional> v1, v2, vr;
+            Vector<Racional> vr1;
+            Vector<Racional> vr2;
+            Vector<Racional> vrr;
             if(racionales.size() >= 2){
                 cout << "Racionales" << endl;
                 for(int i = 0;i < racionales.size();i++){
@@ -27,7 +29,7 @@ void opciones3(int x){
                 }
                 cout << "Seleccione el primer vector: ";
                 cin >> pos1;
-                v1 = racionales[pos1];
+                vr1 = racionales[pos1];
                 cout << endl;
                 cout << "Racionales" << endl;
                 for(int i = 0;i < racionales.size();i++){
@@ -35,20 +37,20 @@ void opciones3(int x){
                 }
                 cout << "Seleccione el segundo vector: ";
                 cin >> pos2;
-                v2 = racionales[pos2];
+                vr2 = racionales[pos2];
 
                 mostrarOperaciones();
                 cin >> opcion;
 
                 switch(opcion){
                     case 1:
-                        vr = v1 + v2;
-                        cout << v1.toString() << " + " << v2.toString() << " = " << vr.toString();
+                        vrr = vr1 + vr2;
+                        cout << vr1.toString() << " + " << vr2.toString() << " = " << vrr.toString() << endl;
                         break;
 
                     case 2:
-                        vr = v1 * v2;
-                        cout << v1.toString() << " * " << v2.toString() << " = " << vr.toString();
+                        vrr = vr1 * vr2;
+                        cout << vr1.toString() << " * " << vr2.toString() << " = " << vrr.toString() << endl;
                         break;
 
                     default:
@@ -64,7 +66,9 @@ void opciones3(int x){
 
         case 2:{
             int pos1, pos2, opcion;
-            Vector<Complejo> v1, v2;
+            Vector<Complejo> vc1;
+            Vector<Complejo> vc2;
+            Vector<Complejo> vcr;
             if(complejos.size() >= 2){
                 cout << "Complejos" << endl;
                 for(int i = 0;i < complejos.size();i++){
@@ -72,7 +76,7 @@ void opciones3(int x){
                 }
                 cout << "Seleccione el primer vector: ";
                 cin >> pos1;
-                v1 = complejos[pos1];
+                vc1 = complejos[pos1];
                 cout << endl;
                 cout << "Complejos" << endl;
                 for(int i = 0;i < complejos.size();i++){
@@ -80,7 +84,27 @@ void opciones3(int x){
                 }
                 cout << "Seleccione el segundo vector: ";
                 cin >> pos2;
-                v2 = complejos[pos2];
+                vc2 = complejos[pos2];
+
+                mostrarOperaciones();
+                cin >> opcion;
+
+                switch(opcion){
+                    case 1:
+                        vcr = vc1 + vc2;
+                        cout << vc1.toString() << " + " << vc2.toString() << " = " << vcr.toString() << endl;
+                        break;
+
+                    case 2:
+                        vcr = vc1 * vc2;
+                        cout << vc1.toString() << " * " << vc2.toString() << " = " << vcr.toString() << endl;
+                        break;
+
+                    default:
+                        cout << "La opcion ingresada no es valida" << endl;
+                        break;
+                }
+
             }
             break;
         }
