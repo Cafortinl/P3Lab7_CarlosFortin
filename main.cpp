@@ -47,12 +47,14 @@ void opciones3(int x){
                         vrr = vr1 + vr2;
                         cout << vr1.toString() << " + " << vr2.toString() << " = " << vrr.toString() << endl;
                         racionales.push_back(vrr);
+                        cout << endl;
                         break;
 
                     case 2:
                         vrr = vr1 * vr2;
                         cout << vr1.toString() << " * " << vr2.toString() << " = " << vrr.toString() << endl;
                         racionales.push_back(vrr);
+                        cout << endl;
                         break;
 
                     default:
@@ -96,12 +98,14 @@ void opciones3(int x){
                         vcr = vc1 + vc2;
                         cout << vc1.toString() << " + " << vc2.toString() << " = " << vcr.toString() << endl;
                         complejos.push_back(vcr);
+                        cout << endl;
                         break;
 
                     case 2:
                         vcr = vc1 * vc2;
                         cout << vc1.toString() << " * " << vc2.toString() << " = " << vcr.toString() << endl;
                         complejos.push_back(vcr);
+                        cout << endl;
                         break;
 
                     default:
@@ -141,6 +145,7 @@ void opciones2(int x){
             Racional z(nZ,dZ);
             Vector<Racional> temp(x,y,z);
             racionales.push_back(temp);
+            cout << endl;
             break;
         }
 
@@ -163,6 +168,7 @@ void opciones2(int x){
             Complejo z(rZ,iZ);
             Vector<Complejo> temp(x,y,z);
             complejos.push_back(temp);
+            cout << endl;
             break;
         }
 
@@ -220,6 +226,7 @@ void opciones1(int x){
             cout << "2. Complejos" << endl;
             cin >> opcion;
             opciones3(opcion);
+            cout << endl;
             break;
         }
 

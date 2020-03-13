@@ -42,7 +42,6 @@ Racional Racional::mult(Racional r1, Racional r2){
 }
 
 void Racional::simplificar(){
-    int div = den;
     for(int i = 1;i <= den;i++){
         if(num % i == 0 && den % i == 0){
             num /= i;
