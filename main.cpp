@@ -46,11 +46,13 @@ void opciones3(int x){
                     case 1:
                         vrr = vr1 + vr2;
                         cout << vr1.toString() << " + " << vr2.toString() << " = " << vrr.toString() << endl;
+                        racionales.push_back(vrr);
                         break;
 
                     case 2:
                         vrr = vr1 * vr2;
                         cout << vr1.toString() << " * " << vr2.toString() << " = " << vrr.toString() << endl;
+                        racionales.push_back(vrr);
                         break;
 
                     default:
@@ -93,11 +95,13 @@ void opciones3(int x){
                     case 1:
                         vcr = vc1 + vc2;
                         cout << vc1.toString() << " + " << vc2.toString() << " = " << vcr.toString() << endl;
+                        complejos.push_back(vcr);
                         break;
 
                     case 2:
                         vcr = vc1 * vc2;
                         cout << vc1.toString() << " * " << vc2.toString() << " = " << vcr.toString() << endl;
+                        complejos.push_back(vcr);
                         break;
 
                     default:
@@ -120,17 +124,17 @@ void opciones2(int x){
     switch(x){
         case 1:{
             int nX,dX,nY,dY,nZ,dZ;
-            cout << "Ingrese el numerador del elemento x: " << endl;
+            cout << "Ingrese el numerador del elemento x: ";
             cin >> nX;
-            cout << "Ingrese el denominador del elemento x: " << endl;
+            cout << "Ingrese el denominador del elemento x: ";
             cin >> dX;
-            cout << "Ingrese el numerador del elemento y: " << endl;
+            cout << "Ingrese el numerador del elemento y: ";
             cin >> nY;
-            cout << "Ingrese el denominador del elemento y: " << endl;
+            cout << "Ingrese el denominador del elemento y: ";
             cin >> dY;
-            cout << "Ingrese el numerador del elemento z: " << endl;
+            cout << "Ingrese el numerador del elemento z: ";
             cin >> nZ;
-            cout << "Ingrese el denominador del elemento z: " << endl;
+            cout << "Ingrese el denominador del elemento z: ";
             cin >> dZ;
             Racional x(nX,dX);
             Racional y(nY,dY);
